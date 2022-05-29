@@ -73,7 +73,7 @@ public class ReceitaController {
 
                 // Iterar a listagem e atualizar as contas, com os valores que vieram da planilha
                 for (Receita receita : receitas) {
-                    boolean result = ReceitaService.getInstance().atualizarConta(receita.getAgencia(), receita.getConta(), receita.getSaldo(), receita.getStatus());
+                    boolean result = ReceitaService.getInstance().updateAccount( receita.getAgencia(), receita.getConta(), receita.getSaldo(), receita.getStatus() );
 
                     // Popular o resultado caso houve sucesso em atualizar ou havia algum valor inválido
                     receita.setResult(result);

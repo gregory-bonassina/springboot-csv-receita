@@ -40,11 +40,11 @@ public class SincronizacaoReceita implements CommandLineRunner {
      */
     @Override
     public void run(String... args) throws Exception {
-        // args = new String[] {
-        //     "C:/Users/Greg/Desktop/input.csv"
-        // };
-
-        SincronizacaoReceita.getInstance().startup( args );
+        if ( args.length > 0 ) {
+            SincronizacaoReceita.getInstance().startup( args );
+        } else {
+            System.out.println( "É necessário passar um arquivo CSV como argumento." );
+        }
     }
 
     /**

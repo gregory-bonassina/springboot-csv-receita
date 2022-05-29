@@ -11,6 +11,13 @@ public class Receita {
     public static final String HEADER_STATUS  = "status";
     public static final String HEADER_RESULT  = "resultado";
 
+    public static final String[] STATES = {
+        "A",
+        "I",
+        "B",
+        "P"
+    };
+
     public static final String[] HEADERS = {
             HEADER_AGENCIA,
             HEADER_CONTA,
